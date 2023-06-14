@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install",
-    "precommit" : "npm run lint && npm run build"
+    "precommit": "npm run lint && npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +40,7 @@
     "@types/react-dom": "^18.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.12.1",
     "react-scripts": "5.0.1",
     "sass": "^1.63.4",
     "web-vitals": "^2.1.4"
@@ -52,7 +53,7 @@
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
-    "typescript": "^4.9.5",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "typescript": "^4.9.5"
   }
 }
