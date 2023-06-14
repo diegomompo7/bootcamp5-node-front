@@ -1,6 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
-import ClassroomPage from "./pages/ClassroomPage/ClassroomTable/ClassroomPage";
+import ClassroomPage from "./pages/ClassroomPage/ClassroomPage";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SubjectPage from "./pages/SubjectPage/SubjectPage";

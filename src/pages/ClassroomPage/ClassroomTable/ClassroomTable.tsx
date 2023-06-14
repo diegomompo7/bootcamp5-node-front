@@ -1,4 +1,4 @@
-import { ClassroomResponse } from "../../models/Classrom";
+import { ClassroomResponse } from "../../../models/Classrom";
 
 interface ClassroomProps {
   classrooms: ClassroomResponse[];

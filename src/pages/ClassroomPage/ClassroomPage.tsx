@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import { AuthContext } from "../../../App";
-import Header from "../../../components/Header/Header"
+import { AuthContext } from "../../App";
+import Header from "../../components/Header/Header"
 import "./ClassroomPage.scss"
-import { ClassroomResponse } from "../../../models/Classrom";
-import ClassroomTable from "../ClassroomTable";
+import { ClassroomResponse } from "../../models/Classrom";
+import ClassroomTable from "./ClassroomTable/ClassroomTable";
 
 const ClassroomPage = (): JSX.Element => {
   const authInfo = useContext(AuthContext);
