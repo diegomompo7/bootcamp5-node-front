@@ -1,6 +1,5 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { ClassroomCreate } from "../../../models/Classroom";
-import React from "react";
 
 interface ClassroomFormProps {
   userToken?: string;
