@@ -11,8 +11,8 @@ const SubjectTable = (props: SubjectProps): JSX.Element => {
         <tr>
           <th>ID</th>
           <th>Name</th>
-          <th>Classroom</th>
           <th>Teacher</th>
+          <th>Classroom</th>
         </tr>
       </thead>
       <tbody>
@@ -20,8 +20,10 @@ const SubjectTable = (props: SubjectProps): JSX.Element => {
           <tr key={subject._id}>
             <td>{subject._id}</td>
             <td>{subject.name}</td>
+            <td>
+              {subject.teacher.firstName} {subject.teacher.lastName}
+            </td>
             <td>{subject.classroom.name}</td>
-            <td>{subject.teacher.firstName} {subject.teacher.lastName}</td>
           </tr>
         ))}
       </tbody>

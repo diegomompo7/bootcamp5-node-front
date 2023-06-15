@@ -1,4 +1,4 @@
-import { ClassroomResponse } from "./Classrom";
+import { ClassroomResponse } from "./Classroom";
 
 export enum ROL {
   "STUDENT" = "STUDENT",

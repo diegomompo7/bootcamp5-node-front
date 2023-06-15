@@ -1,4 +1,4 @@
-import { ClassroomResponse } from "./Classrom";
+import { ClassroomResponse } from "./Classroom";
 import { UserResponse } from "./User";
 
 export interface SubjectCreate {

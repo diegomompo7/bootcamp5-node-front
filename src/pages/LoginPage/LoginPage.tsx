@@ -12,6 +12,7 @@ const LoginPage = (): JSX.Element => {
   const authInfo = useContext(AuthContext);
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
+  const API_URL_LOGIN = `${process.env.REACT_APP_API_URL as string}/user/login`;
 
   const submitForm = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
@@ -32,7 +33,7 @@ const LoginPage = (): JSX.Element => {
     if (!loginInfo.email || !loginInfo.password) {
       alert("Email y contraseña son obligatorios!");
     } else {
-      fetch("http://localhost:3000/user/login", {
+      fetch(API_URL_LOGIN, {
         method: "POST",
         body: JSON.stringify(loginInfo),
         headers: { "Content-type": "application/json; charset=UTF-8" },

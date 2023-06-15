@@ -4,9 +4,11 @@ import { AuthContext } from "../../App";
 import Header from "../../components/Header/Header";
 import "./SubjectPage.scss";
 import SubjectTable from "./SubjectTable/SubjectTable";
+import SubjectForm from "./SubjectForm/SubjectForm";
 import { SubjectResponse } from "../../models/Subject";
 
 const SubjectPage = (): JSX.Element => {
+  const API_URL_SUBJECT = `${process.env.REACT_APP_API_URL as string}/subject`;
   const authInfo = useContext(AuthContext);
 
   const [subjects, setSubjects] = useState<SubjectResponse[]>([]);
@@ -17,7 +19,7 @@ const SubjectPage = (): JSX.Element => {
 
   const fetchSubjects = (): void => {
     if (authInfo?.userToken) {
-      fetch("http://localhost:3000/subject", {
+      fetch(API_URL_SUBJECT, {
         headers: {
           Authorization: `Bearer ${authInfo.userToken}`,
         },
@@ -44,7 +46,11 @@ const SubjectPage = (): JSX.Element => {
         <>
           <Header></Header>
           <h1>Subject Page</h1>
+          <h3>Listado de asignaturas:</h3>
           <SubjectTable subjects={subjects}></SubjectTable>
+
+          <h3>Crear asignatura:</h3>
+          <SubjectForm fetchSubjects={fetchSubjects} userToken={authInfo?.userToken}></SubjectForm>
         </>
       ) : (
         <Navigate to="/login" replace={true}></Navigate>
